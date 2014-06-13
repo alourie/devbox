@@ -13,4 +13,4 @@ cd devbox_ansible
 echo 'localhost   ansible_connection=local' > inventory
 ansible-playbook -K -i inventory mybook.yml
 
-for conf in vim zsh; do vcsh clone git://github.com/alourie/vcsh-$conf.git; done
+for conf in vim zsh; do vcsh clone git://github.com/alourie/vcsh-$conf.git $conf; done
