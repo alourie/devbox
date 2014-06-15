@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install -y ansible cmake vcsh
+sudo apt-get install -y ansible cmake vcsh python-apt
 
 for role in Ansibles.apt Ansibles.vim Ansibles.build-essential Ansibles.git Ansibles.python devbox.oh-my-zsh; do sudo ansible-galaxy install $role; done
 
