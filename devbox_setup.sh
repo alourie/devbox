@@ -2,7 +2,7 @@
 
 sudo apt-get install -y ansible python-apt
 
-for role in Ansibles.apt Ansibles.vim Ansibles.build-essential Ansibles.git Ansibles.python devbox.oh-my-zsh; do sudo ansible-galaxy install $role; done
+for role in Ansibles.apt Ansibles.vim Ansibles.build-essential Ansibles.git Ansibles.python devbox.oh-my-zsh devbox.chrome; do sudo ansible-galaxy install $role; done
 
 mkdir ~/Projects
 cd ~/Projects
