@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install -y ansible cmake vcsh python-apt
+sudo apt-get install -y ansible python-apt
 
 for role in Ansibles.apt Ansibles.vim Ansibles.build-essential Ansibles.git Ansibles.python devbox.oh-my-zsh; do sudo ansible-galaxy install $role; done
 
@@ -10,7 +10,4 @@ cd ~/Projects
 git clone git://github.com/alourie/devbox_ansible
 cd devbox_ansible
 
-echo 'localhost   ansible_connection=local' > inventory
 ansible-playbook -K -i inventory mybook.yml
-
-for conf in vim zsh; do vcsh clone git://github.com/alourie/vcsh-$conf.git $conf; done
