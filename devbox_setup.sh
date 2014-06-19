@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install -y ansible python-apt git
+sudo apt-get install -y ansible python-apt python-pycurl git
 
 for role in Ansibles.apt Ansibles.vim Ansibles.build-essential Ansibles.python devbox.oh-my-zsh devbox.chrome; do sudo ansible-galaxy install $role; done
 
