@@ -10,4 +10,4 @@ cd ~/Projects
 git clone git://github.com/alourie/devbox_ansible
 cd devbox_ansible
 
-ansible-playbook -K -i inventory mybook.yml
+ansible-playbook -K -i inventory mybook.yml -e ansible_os_family=Debian
